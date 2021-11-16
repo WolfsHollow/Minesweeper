@@ -1,0 +1,186 @@
+:root {
+    --gridSize: 5;
+    --fontSize: 4rem;
+  }
+  
+  body {
+    background-color: #65036A;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #topWrapper {
+    height: 100px;
+    width: 800px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  #minesLeft{
+    width: 45%;
+    height: 100%;
+    background-color: green;
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+  }
+  
+  select {
+    width: 45%;
+    height: 100%;
+    font-size: 4rem;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  #gameWrapper {
+    display: grid;
+    grid-template-columns: repeat(var(--gridSize), auto);
+    grid-template-rows: repeat(var(--gridSize), auto);
+    background-color: darkgrey;
+    justify-content: center;  
+    height: 800px;
+    width: 800px;  
+    margin-bottom: 40px;
+    margin-top: 15px;
+  /*   overflow: hidden; */
+  }
+  
+  #buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    height: max(10%, 100px);
+    width: 80vw;
+    margin-top: 50px;
+  /*   background-color: blue;   */
+  }
+  
+  
+  .box {
+    display: flex;
+    background: radial-gradient(#D09DD3, #901997);
+    background-color: grey;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: calc(800px/var(--gridSize));
+    width: calc(800px/var(--gridSize));
+    font-size: var(--fontSize);
+    -webkit-text-stroke: 1px darkgrey;
+  }
+  
+  .box:hover {
+    background-color: #7D1EC8;
+    background: #7D1EC8;
+  }
+  
+  .blue{
+    color: blue;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .purple {
+    color: purple;
+  }
+  
+  .white{
+    color: white;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .orange{
+    color: orange;
+  }
+  
+  .yellow{
+    color: yellow;
+  }
+  
+  .brown{
+    color: brown;
+  }
+  
+  .black {
+    color: black;
+  }
+  
+  button {
+    height: 100px;
+    width: 200px;
+    font-size: 3rem;
+  }
+  
+  .toggle:active {
+    background-color: black; 
+  }
+  
+  .overlayScreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+  }
+  
+  .overlayScreen button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+  }
+  
+  .overlayMessage {
+    color: white;
+  }
+  
+  .overlayScreen.show {
+    display: flex;
+  }
+  
+  .selected {
+    background: purple;
+    background-color: purple;
+  }
+  
+  .flagged {
+    background: radial-gradient(#000000, #901997)
+  }
+  
+  #dig {
+    border: 2px solid black;
+  }
+  
+  #dig:before {  
+    content: 'Active';
+    font-size: 1rem;
+    display: flex;
+    color: red;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }

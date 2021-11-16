@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wulfes Minesweeper</title>
+    <meta charset="UTF-8"/>
+    <script src="Minesweeper.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">  
+</head>
+<body id = 'page'>
+    <div class="overlayScreen" id='overlayScreen'>
+      <div id='overlayMessage'></div>
+      <button id="restartButton">Restart</button>
+    </div>
+    <div id='topWrapper'>
+      <div id='minesLeft'></div>
+      <button id='reset'>Restart</button>    
+      <select id='difficultyDropDown'>
+        <option value= 'easy'>Easy</option>
+        <option value='medium' selected>Medium</option>
+        <option value='hard'>Hard</option>
+      </select>
+    </div>
+    <div id='gameWrapper'></div>
+    <div id='buttonWrapper'>
+      <button id='dig' class = 'toggle'>Dig</button>
+  <!--     <button id='flag' class = 'toggle'>Flag</button> -->
+    </div>
+  
+  </body>      
+  
+</html>
